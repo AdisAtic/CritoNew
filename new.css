@@ -1,52 +1,67 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 main{
     background-color: rgb(213, 213, 196);
 }
 
-
-.content {
+.top-background {
+    background-color: rgb(240, 239, 232); /* Change the color as needed */
+    height: 870px; /* Adjust the height of the background */
+    width: 100%;
+    position: absolute;
+    top: -10px; /* Adjust this value to control the overlap */
+    z-index: -1; /* Set a lower z-index to place it behind other elements */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    background-color: #ffffff;
+  }
+  
+  
+  
+  .logo {
+    width: 150px; /* Adjust the width of the logo */
+    height: auto;
+    margin-right: 30px; /* Adjust the margin as needed */
+    cursor: pointer;
+    margin-left: 120px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  
+  
+  .social-icons {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.contactinfo {
-    text-align: center;
-    color: rgb(172, 172, 172);
-    position: absolute;
-    top: 10px;
-    left: 46%;
-    transform: translateX(-50%);
-    border-bottom: solid 1px;
-    border-color: rgb(172, 172, 172);
+    gap: 10px;
     cursor: pointer;
+    margin-right: 120px;
   }
-
-  .contact-logo {
-    width: 15px;
-    height: 15px;
-  }
-
-.wrapper {
-    display: flex;
-    gap: 30px;
-}
-
-.login-button {
-    background-color: rgb(253, 218, 116);
-    border: none;
-    color: black;
-    padding: 14px 55px;
-    font-size: 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-left: 600px;
+  
+  .social-icons img {
+    width: 20px;
+    height: 20px;
   }
   .login-box {
     display: flex;
@@ -54,67 +69,104 @@ main{
     align-items: flex-end;
     margin-top: 0px;
   }
+  
+  .login-button {
+    background-color: rgb(253, 218, 116);
+    border: none;
+    color: black;
+    padding: 14px 55px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 100px;
+  }
+  
+  .login-button:hover {
+    background-color: #ffdb4d;
+  }
+  
+  .contact-info {
+    text-align: center;
+    color: rgb(172, 172, 172);
+    position: absolute;
+    top: 10px;
+    left: 46%;
+    transform: translateX(-50%);
+    border-bottom: solid 1px;
+    padding-bottom: 10px;
+    border-color: rgb(172, 172, 172);
+    cursor: pointer;
+  }
+  
+  .contact-logo {
+    width: 15px;
+    height: 15px;
+  }
 
-.login-button:hover {
-    background-color: yellow /* Darker shade for hover effect */
-}
+  .Home-service-news-contact {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    cursor: pointer;
+  }
 
-.top-bar{
+  .content {
     display: flex;
-    justify-content: center;
-}
-
-main {
-    display: flex;
-    justify-content: space-between; /* Spreads out the child elements */
-    align-items: center; /* Aligns items vertically in the center */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .headline {
     /* Styling for the headline text */
-    font-size: 100px; /* Example font size */
+    font-size: 80px; /* Example font size */
     font-weight: bold; /* Example font weight */
+    margin-top: -200px;
     /* Add more styling as needed */
 }
 
+.buttons {
+    text-align: left;
+    margin-left: 0;
+
+}
 .btn {
     padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
+    margin-top: 30px;
+    font-size: 14px;
     cursor: pointer;
     border: none; /* Remove border for a cleaner look */
     border-radius: 20px; /* Rounded edges */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-/* Styling for the 'Get Consulting' button */
 #consulting {
-    background-color: orange; /* Orange background */
-    color: white; /* White text */
+    background-color: rgb(253, 218, 116);
+    color: black;
 }
 
 #consulting:hover {
-    background-color: darkorange; /* Darker orange on hover */
-}
+    background-color: #ffdb4d;
+  }
 
-/* Styling for the 'Learn More' button */
 #learn-more {
-    background-color: white; /* White background */
-    color: black; /* Black text */
+    background-color: transparent;
+    color: black;
     border: 1px solid black; /* Add border for visibility */
 }
 
 #learn-more:hover {
     background-color: #f0f0f0; /* Light grey on hover */
 }
-
-
 .picture {
     display: flex;
     justify-content: space-evenly;
-    gap: 20px; /* Space between images */
-    margin: 30px; /* Margin on all sides */
-    /* You can adjust the margin value as per your requirement */
+    gap: 20px; /* Space mellan loggor */
+    margin-top: 40px; 
+    margin-right: 40px;
 }
 
 .picture img {
@@ -122,14 +174,19 @@ main {
     height: 100px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 60px;
+}
+.grid-one {
+    width: 70%;
+    margin: 0 auto; /* Add this line to center the section */
+    text-align: center; /* Add this line to center the contents */
+    margin-top: 100px;
 }
 
-
-
-.grid-main{
+.grid-main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
     align-items: start;
 }
 
@@ -143,36 +200,41 @@ main {
 .rad1 > h2 {
     padding: 0;
     margin: 0;
+    text-align: start;
 }
-.rad1 > p {
 
-    color: red;
+.smallheaders {
+    color: rgb(255, 114, 65);
+    text-align: start;
+    font-size: 13px;
 }
 
 .flex-ouraccount {
-    padding: 20px;
-    border: solid 1px rgb(118, 118, 118);
+    padding: 60px;
+    border: solid 1px rgb(240, 239, 231);
     display: flex;
     flex-direction: column;
 }
+.business-div {
+    font-weight: bold;
+    margin: 10px;
 
+}
+.lorem {
+    font-size: 10px;
+    font-weight: lighter;
+    color: grey;   
+}
 .btn2{
-    padding: 10px 20px;
-    background-color: orange;
-    margin: 5px;
-    font-size: 16px;
+    padding: 10px 100px;
+    margin-top: 30px;
+    font-size: 14px;
     cursor: pointer;
-    border: none; /* Remove border for a cleaner look */
-    border-radius: 20px; /* Rounded edges */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    border: none; 
+    border-radius: 30px; 
+    transition: background-color 0.3s;
+    background-color: rgb(253, 218, 116);
 }
-
-
-
-.lorem{
-    font-size: smaller;
-}
-
 .bild{
     width: 400px;
     height: 400px;
@@ -183,65 +245,129 @@ main {
 .container-bild{
     display: flex;
     gap: 60px;
-    border: solid 1px;
     margin-top: 20px;
     justify-content: center;
 
 }
-
 .container-text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 15px;
+    text-align: start;
+    margin-left: 50px;
     /* margin: 0 auto */
 }
+.section-two {
+    width: 70%;
+    margin: 0 auto; /* Add this line to center the section */
+    text-align: center; /* Add this line to center the contents */
+    margin-top: 100px;
+}
+.btn3{
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none; 
+    border-radius: 30px; 
+    transition: background-color 0.3s;
+    background-color: black;
+    color: white;
+}
+.btn4{
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none; 
+    border-radius: 30px; 
+    transition: background-color 0.3s;
+    background-color: transparent;
+    color: black
+}
 
-
-.main-container {
-    background-color: rgb(186, 186, 172); 
+.bakgrund {
+    background-color: rgb(240, 239, 232);
+    margin-top: 100px;
+}
+.sektiontre {
+    width: 70%;
+    margin: 0 auto; /* Add this line to center the section */
+    text-align: center; /* Add this line to center the contents */
+    margin-top: 100px;
+}
+.main-container {   
     padding: 20px; /* Space between the container edge and flex items */
     /* Additional styles for the main container (e.g., border, margin) can be added here */
     margin-top: 30px;
+    text-align: start;
+
 }
 
-.flex-container{
-    margin-top: 30px;
+.flex-container {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    gap: 15px;
+   margin-top: 30px;
 }
 
 .flex-container>div{
-    border: solid 1px;
-    height: 15vh;
+    height: 25vh;
     padding: 10px;
-    text-align: center;
+    text-align: start;
+    font-weight: bold;
 }
 
 .block1, .block3, .block4{
-    background-color: #f0f0f0;
+    background-color: white;
+    text-align: start;
+
 }
 
 .block2{
     background-color: rgb(233, 208, 137);
+    
 }
-
 .browse {
-    margin: 15px 0;
-    display: flex;
-    justify-content: center;
-    width: 100%
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    border: solid black 1px; 
+    border-radius: 30px; 
+    transition: background-color 0.3s;
+    background-color: transparent;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.browse > button {
-    border-radius: 15px;
-}
+.sektionfyra {
+    margin: 0 auto;
 
+}
 .usb-with-icon {
+   margin-right: 10px;
+}
+.logo2 {
+    height: 25px;
+    width: 25px;
+}
+.containerett {
     display: flex;
     align-items: center;
+}
+
+.span-header {
+    font-weight: bold;
+}
+
+.text-contessnt {
+    display: flex;
+    flex-direction: column;
 }
 
 .background-images {
@@ -252,11 +378,11 @@ main {
     position: relative;
 
 }
-
 .white {
     height: 40%;
     flex: 1;
 }
+
 .beige {
     height: 60%;
     flex: 1;
@@ -267,17 +393,19 @@ main {
     display: flex;
     padding: 20px;
     justify-content: center;
+    margin-top: 30px;
 }
 
-.flex-choose > div {
-    padding: 20px;
-}
+
 
 .image-amy {
     height: 300px;
+    margin-top: 60px;
+    margin-left: 20px;
 }
-
-
+.span-header {
+    font-weight: bold;   
+}
 .grid-projects {
     display:grid;
     gap: 20px;
@@ -288,7 +416,7 @@ main {
 
 .projects-image {
     width: 100%;
-    height: 200px
+    height: 250px
 }
 
 .section {
@@ -304,18 +432,27 @@ main {
     flex-direction: column;
     align-items: center;
 }
+.meet-team-button {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 40px;
+    border: 1px black solid;
+    background: transparent;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+}
 
-
-.projects-header {
-    border-bottom: 1px solid #d3d3d3;
+.readmore {
+    text-align: end;
+    font-size: 10px;
+    cursor: pointer;
+}
+.projectsheader {
+    font-weight: bold;
+    border-bottom: solid 2px rgb(231, 231, 231);
     padding-bottom: 15px;
 }
-
-.projects-read-more {
-    text-align: right;
-    font-size: 10px;
-}
-
 .projects-button {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -324,9 +461,9 @@ main {
     background: black;
     color: white;
     padding: 10px 15px;
-}
+    cursor: pointer;
 
-.meet-team-section, .meet-team-articles {
+}.meet-team-section, .meet-team-articles {
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -365,6 +502,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-top: 2rem;
+    text-align: start;
 }
 
 .section-clients {
@@ -385,44 +523,63 @@ main {
     gap: 10px;
     margin-top: 1.5rem;
 }
-
 .grid-clients div p {
     font-size: 14px;
     font-weight: 100;
 }
-
-.section-button {
-    margin-top: 2rem;
+.smallname {
+    font-weight: bold;
 }
-
 .newsletter {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     padding: 3rem 13rem;  
-    background-color: beige; 
+    background-color: rgb(240, 239, 231); 
     margin-top: 2rem;
-}
-
-.input-btn-div {
-    display: flex;
-    gap: 15px
+    width: 100%;
 }
 
 .input {
-    padding: 5px;
-    border-radius: 30px;
-    border: 1px solid #d3d3d3;
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none; 
+    border-radius: 30px; 
 }
+
+.button-newsletter {
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none; 
+    border-radius: 30px; 
+    background-color: rgb(253, 218, 116);;
+    
+}
+
+
 
 .flex-articles {
     display: flex;
     margin-top: 3rem;
+    margin: 0 auto;
     gap: 10px;
-    padding: 0rem 13rem
+    padding: 0rem 13rem;
 }
 .meet-team-articles {
     padding: 0rem 13rem;
     margin-top: 2rem;
+    text-align: start;
+}
+.businessheaders {
+    font-size: 10px;
+    color: rgb(106, 108, 114);
+}
+
+.articles-div {
+    margin-bottom: 50px;
 }
 
 .articles-div img {
